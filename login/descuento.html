@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Descuento Residente</title>
+</head>
+<body>
+    <h1>Cálculo descuento residente</h1>
+
+    <label for="Adulto">Adulto</label><br />
+    <input type="number" id="Adulto" value="0"><br />
+
+    <label for="Nino">Niño</label><br />
+    <input type="number" id="Nino" value="0"><br /><br />
+
+    <label>¿Llevas maleta?</label><br />
+    <input type="radio" name="maleta" id="maletaSI" value="si">
+    <label for="maletaSI">Sí</label>
+
+    <input type="radio" name="maleta" id="maletaNO" value="no">
+    <label for="maletaNO">No</label><br /><br />
+
+    <label for="cantidadMaletas">¿Cuántas maletas llevas?</label><br />
+    <input type="number" id="cantidadMaletas" value="0"><br /><br />
+
+    <label>¿Es residente?</label><br />
+    <input type="radio" id="residenteSI" name="residente" value="si">
+    <label for="residenteSI">Sí</label><br />
+    <input type="radio" id="residenteNO" name="residente" value="no">
+    <label for="residenteNO">No</label><br /><br />
+
+    <button onclick="calcularPrecio()">Calcular precio</button>
+
+    <script>
+        function calcularPrecio() {
+            const adultos = parseInt(document.getElementById("Adulto").value) || 0;
+            const ninos = parseInt(document.getElementById("Nino").value) || 0;
+            const cantidadMaletas = parseInt(document.getElementById("cantidadMaletas").value) || 0;
+
+            const esResidente = document.getElementById("residenteSI").checked;
+            const llevaMaleta = document.getElementById("maletaSI").checked;
+
+            let precioAdultos = adultos * 100;
+            let precioNinos = ninos * 75;
+            let precioMaletas = llevaMaleta ? cantidadMaletas * 50 : 0;
+
+            // Aplicar descuento si es residente
+            if (esResidente) {
+                precioAdultos *= 0.25;
+                precioNinos *= 0.25;
+            }
+
+            const precioFinal = precioAdultos + precioNinos + precioMaletas;
+
+            alert("El precio es " + precioFinal.toFixed(2) + "€");
+        }
+    </script>
+</body>
+</html>
