@@ -8,12 +8,27 @@
 
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Menú</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Goleadores</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+      </div>
+    </div>
+  </div>
+</nav>
     <h1 class="text-center m-4">Top 8 goleadores de la história de los mundiales de fútbol</h1>
     <div class="container">
         <div class="row g-3">
             <div class="col-12 col-md-4 col-lg-2 bg-primary border p-3 text-center rounded">
                 <img class="img-fluid img-thumbnail" src="Klose.jpg" alt="">
-                <strong>Miroslav Klose</strong> <br>
+                <strong> Miroslav Klose</strong> <br>
                 16 goles <br>
             </div>
             <div class="col-12 col-md-4 col-lg-2 bg-success border p-3 text-center rounded">
@@ -45,6 +60,29 @@
             </div>
         </div>
     </div>
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="Klose.jpg" class="d-block w-100" alt="Klose">
+    </div>
+    <div class="carousel-item">
+      <img src="Kocsis.jpg" class="d-block w-100" alt="Kocsis">
+    </div>
+    <div class="carousel-item">
+      <img src="Pelé.jpg" class="d-block w-100" alt="Pelé">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
